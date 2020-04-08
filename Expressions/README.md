@@ -8,6 +8,16 @@
 
 Expression gets evaluated to a value.
 
+- No curly braces needed for single line expressions
+
+- Type annotations can be omitted
+
+- No dots or parentheses needed
+
+- Semicolons can be omitted
+
+- No return statement needed
+
 ```sbt
 scala> if(1 == 1) true else false
 res4: Boolean = true
@@ -15,12 +25,6 @@ res4: Boolean = true
 scala> if("Scala" startsWith "S") "Scala is a lightweight language" else "Scala is not Java"
 res8: String = Scala is a lightweight language
 ```
-
-- No curly braces needed for single line expressions
-- Type annotations can be omitted
-- No dots or parentheses needed
-- Semicolons can be omitted
-- No return statement needed
 
 ### Code Blocks
 

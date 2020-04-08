@@ -19,7 +19,7 @@ scala> message = "Hi"
 
 ## Mutable Variables
 
-An mutable variable is defined with `var` keyword. Can be re-assigned to new value.
+An mutable variable is defined with `var` keyword. Can be re-assigned to new value of same type.
 
 ```sbt
 scala> var message = "Hello World"
