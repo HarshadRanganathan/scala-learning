@@ -7,4 +7,4 @@ Introduction to Scala using example programs
 
 [OO Basics](OO%20Basics/README.md)
 
-[Packages](packages/README.md)
+[Packages](Packages/README.md)
