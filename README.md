@@ -8,3 +8,5 @@ Introduction to Scala using example programs
 [OO Basics](OO%20Basics/README.md)
 
 [Packages](Packages/README.md)
+
+[Collections](Collections/README.md)
