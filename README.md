@@ -12,3 +12,5 @@ Introduction to Scala using example programs
 [Collections](Collections/README.md)
 
 [Functional Programming](Functional%20Programming/README.md)
+
+[For Loops And Expressions](For%20Loops%20And%20Expressions/README.md)
