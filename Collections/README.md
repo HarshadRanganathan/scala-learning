@@ -94,7 +94,7 @@ m: scala.collection.immutable.Map[Int,String] = Map(1 -> a, 2 -> b)
 
 ## Collection Methods
 
-### ++
+### Concatenate
 
 Concatenate collections
 

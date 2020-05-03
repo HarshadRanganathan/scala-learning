@@ -10,3 +10,5 @@ Introduction to Scala using example programs
 [Packages](Packages/README.md)
 
 [Collections](Collections/README.md)
+
+[Functional Programming](Functional%20Programming/README.md)
