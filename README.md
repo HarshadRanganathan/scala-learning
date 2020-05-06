@@ -18,3 +18,7 @@ Introduction to Scala using example programs
 [Inheritance And Traits](Inheritance%20And%20Traits/README.md)
 
 [Pattern Matching](Pattern%20Matching/README.md)
+
+[Optional Values](Optional%20Values/README.md)
+
+[Handling Failure](Handling%20Failure/README.md)
