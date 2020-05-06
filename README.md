@@ -16,3 +16,5 @@ Introduction to Scala using example programs
 [For Loops And Expressions](For%20Loops%20And%20Expressions/README.md)
 
 [Inheritance And Traits](Inheritance%20And%20Traits/README.md)
+
+[Pattern Matching](Pattern%20Matching/README.md)

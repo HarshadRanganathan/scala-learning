@@ -25,6 +25,8 @@
 
           - [Concrete Members](#concrete-members)
 
+- [When to Use Abstract Class Instead of Trait](#when-to-use-abstract-class-instead-of-trait)
+
 ## Inheritance
 
 Each class, except for Any, has exactly one superclass.
@@ -318,3 +320,11 @@ scala> class Duck extends Swimmer with Flyer
          def move: String (defined in trait Flyer)
          (note: this can be resolved by declaring an `override` in class Duck.)
 ```
+
+## When to Use Abstract Class Instead of Trait
+
+There are two main reasons to use an abstract class in Scala:
+
+[1] You want to create a base class that requires constructor arguments.
+
+[2] The code will be called from Java code.
