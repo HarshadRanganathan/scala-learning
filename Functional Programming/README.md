@@ -2,6 +2,12 @@
 
 [Function Values](#function-values)
 
+[Difference Between val and def When Creating Functions](#difference-between-val-and-def-when-creating-functions)
+
+- [Case Expressions](#case-expressions)
+
+- [andThen, compose and toString](#andThen,-compose-and-toString)
+
 [flatMap](#flatMap)
 
 [filter](#filter)
@@ -76,6 +82,62 @@ f: Int => Int = $$Lambda$4469/1182719231@3a88e861
 
 scala> numbers.map(f)
 res9: scala.collection.immutable.Vector[Int] = Vector(2, 3, 4, 5, 6, 7)
+```
+
+## Difference Between val and def When Creating Functions
+
+A `def` method is a method in a class while `val` functions are a concrete instances of Function0 through Function22 (objects).
+
+Few notable differences:
+
+[1] `val` functions can be used as case expressions without requiring match keyword.
+
+[2] `val` functions are objects that have methods like andThen, compose and toString.
+ 
+### Case Expressions
+
+Using case expressions with val functions and anonymous classes without requiring the leading match.
+
+```sbt
+scala> :paste
+// Entering paste mode (ctrl-D to finish)
+
+val f: Any => Any = {
+ case i: Int => println("Int")
+ case d: Double => println("Double")
+ case _ => println("Other")
+}
+
+// Exiting paste mode, now interpreting.
+
+f: Any => Any = $$Lambda$4398/1439582458@20de9fe0
+
+scala> f(1)
+Int
+res0: Any = ()
+
+scala> f(3.2)
+Double
+res1: Any = ()
+```
+
+### andThen, compose and toString
+
+```sbt
+scala> val applyTax = (amount: Double) => amount + 30
+applyTax: Double => Double = $$Lambda$4416/753534868@1d55a169
+
+scala> val applyDiscount = (amount: Double) => amount - 10
+applyDiscount: Double => Double = $$Lambda$4417/1274252598@607bdefd
+
+scala> f.toString
+res3: String = $$Lambda$4398/1439582458@20de9fe0
+
+scala> (applyDiscount compose applyTax)(50.0)
+res9: Double = 70.0
+
+scala> (applyDiscount andThen applyTax)(50.0)
+res10: Double = 70.0
 ```
 
 ## flatMap

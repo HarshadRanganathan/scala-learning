@@ -14,3 +14,5 @@ Introduction to Scala using example programs
 [Functional Programming](Functional%20Programming/README.md)
 
 [For Loops And Expressions](For%20Loops%20And%20Expressions/README.md)
+
+[Inheritance And Traits](Inheritance%20And%20Traits/README.md)
