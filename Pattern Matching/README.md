@@ -21,6 +21,10 @@
 
 [Pattern Guards](#pattern-guards)
 
+[Vals With Patterns](#vals-with-patterns)
+
+[Patterns in Generators](#patterns-in-generators)
+
 Expressions are matched against a pattern.
 
 Match expressions return a value and there is no fallthrough.
@@ -218,7 +222,7 @@ scala> matching(Vector(1, 2, 3, 4))
 res7: String = Last element is 4
 ```
 
-### Pattern Alternatives
+## Pattern Alternatives
 
 ```sbt
 :paste
@@ -237,7 +241,7 @@ scala> matching("12:00")
 res0: String = Midnight or noon
 ```
 
-### Pattern Binders
+## Pattern Binders
 
 Use `@` to bind a pattern to a variable.
 
@@ -259,7 +263,7 @@ scala> matching(Time(12, 0))
 res0: String = 12 with 0 minutes
 ```
 
-### Pattern Guards
+## Pattern Guards
 
 Use `if` keyword to define a pattern guard.
 
@@ -279,4 +283,23 @@ matching: (any: Any)String
 
 scala> matching(Time(12, 00))
 res0: String = It is 12:00 pm
+```
+
+## Vals With Patterns
+
+Use patterns to define vals.
+
+```sbt
+scala> val (h, m) = (12, 0)
+h: Int = 12
+m: Int = 0
+```
+
+## Patterns in Generators
+
+Patterns can simplify generators involving tuples.
+
+```sbt
+scala> for((m, n) <- Vector(1 -> 2, 2 -> 3)) yield m + n
+res0: scala.collection.immutable.Vector[Int] = Vector(3, 5)
 ```
